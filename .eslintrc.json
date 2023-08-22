@@ -1,12 +1,25 @@
 {
-  "extends": "airbnb-base",
-  "env": {
-    "browser": true,
-    "es6": true,
-    "worker": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 10,
-    "sourceType": "script"
-  }
+	"rules": {
+		"linebreak-style": "off",
+		"no-tabs": "off",
+		"no-continue": "off",
+		"no-restricted-syntax": "off",
+		"no-plusplus": "off",
+		"indent": "off",
+		"quotes": "off",
+		"no-console": "off",
+		"comma-dangle": "off",
+		"no-constant-condition": "off",
+		"max-len": "off"
+	},
+	"extends": "airbnb-base",
+	"env": {
+		"browser": true,
+		"es6": true,
+		"worker": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 10,
+		"sourceType": "script"
+	}
 }
