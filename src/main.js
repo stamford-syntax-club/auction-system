@@ -23,29 +23,28 @@ for (let i = 0; i < 10; i++) {
 
 let userInput;
 
-do {
-    userInput = prompt("Please select cars (Enter 1 - 10) : ")
-    if (isNaN(userInput) || userInput < 1 || userInput > 10) {
-        console.log("Error: You must enter a number 1 - 10");
-    }
-
-
-} while (isNaN(userInput) || userInput < 1 || userInput > 10 );
-console.log("Your car is " + cars[userInput - 1][0] + ". " + "Current price is " + "$" + cars[userInput-1][1]);
-
-// let bidloop = true
-
-// while (bidloop = true) {
-//     let bidInput = prompt('Bid : ')
-//     if (isNaN(bidInput) || bidInput < cars[userInput-1][1]) {
-//         console.log('You must bid more than current price!')
-//     } else {
-        
+// do {
+//     userInput = prompt("Please select cars (Enter 1 - 10) : ")
+//     if (isNaN(userInput) || userInput < 1 || userInput > 10) {
+//         console.log("Error: You must enter a number 1 - 10");
 //     }
-// }
 
 
+// } while (isNaN(userInput) || userInput < 1 || userInput > 10 );
+// console.log("Your car is " + cars[userInput - 1][0] + ". " + "Current price is " + "$" + cars[userInput-1][1]);
 
+userInput = prompt("Please select cars (Enter 1 - 10) : ")
+while(isNaN(userInput) || userInput < 1 || userInput > 10 ) {
+	userInput = prompt("Invalid Input! Please select cars (Enter 1 - 10) : ")
+}
 
+let bidloop = true
 
-
+while (bidloop = true) {
+    let bidInput = prompt('Bid : ')
+    if (isNaN(bidInput) || bidInput < cars[userInput-1][1]) {
+        console.log('You must bid more than current price!')
+    } else {
+        
+    }
+}
