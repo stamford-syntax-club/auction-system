@@ -1,104 +1,140 @@
 const prompt = require('prompt-sync')({ sigint: true });
 
 
-// OK THIS IS KHING's MESSAGE
-
-// const cars = [
-//                 ["BMW", 2000],
-//                 ["TOYOTA", 1000],
-//                 ["MAZDA", 1500],
-//                 ["TESLA", 3000],
-//                 ["BENZ", 4000],
-//                 ["BYD", 900],
-//                 ["FORD", 1000],
-//                 ["VOLVO", 1200],
-//                 ["JEEB", 2000],
-//                 ["HONDA", 1000],
-//             ];
-
 const cars = [
-    {
-        brand : "BMW",
-        bid : 2000
-    },
-    {
-        brand : "TOYOTA",
-        bid : 1000
-    },
-    {
-        brand : "MAZDA",
-        bid : 1500
-    },
-    {
-        brand : "TESLA",
-        bid : 3000
-    },
-    {
-        brand : "BENZ",
-        bid : 4000
-    },
-    {
-        brand : "BYD",
-        bid : 900
-    },
-    {
-        brand : "FORD",
-        bid : 1000
-    },
-    {
-        brand : "VOLVO",
-        bid : 1200 
-    },
-    {
-        brand : "JEEB",
-        bid : 2000
-    },
-    {
-        brand : "HONDA",
-        bid : 1000
-    },
-    
+	{
+		brand : "BMW",
+		bid : 2000
+	},
+	{
+		brand : "TOYOTA",
+		bid : 1000
+	},
+	{
+		brand : "MAZDA",
+		bid : 1500
+	},
+	{
+		brand : "TESLA",
+		bid : 3000
+	},
+	{
+		brand : "BENZ",
+		bid : 4000
+	},
+	{
+		brand : "BYD",
+		bid : 900
+	},
+	{
+		brand : "FORD",
+		bid : 1000
+	},
+	{
+		brand : "VOLVO",
+		bid : 1200 
+	},
+	{
+		brand : "JEEB",
+		bid : 2000
+	},
+	{
+		brand : "HONDA",
+		bid : 1000
+	},
+
 ]
 
-for (let i = 0; i < 10; i++) {
-    indexNum = i + 1;
 
-    console.log(indexNum + ". " + cars[i][0] + " [" + "$" + cars[i][1] + "]");
-}
+let shop = true
+while(shop = true) {
 
+	console.log("=============================================")
 
-let userInput;
+	for (let i = 0; i < 10; i++) {
+		indexNum = i + 1;
+		console.log(indexNum + ". " + cars[i].brand + " [" + "$" + cars[i].bid + "]");
+	}
 
-// do {
-//     userInput = prompt("Please select cars (Enter 1 - 10) : ")
-//     if (isNaN(userInput) || userInput < 1 || userInput > 10) {
-//         console.log("Error: You must enter a number 1 - 10");
-//     }
+	console.log("=============================================")
 
+	let userInput;
 
-// } while (isNaN(userInput) || userInput < 1 || userInput > 10 );
-// console.log("Your car is " + cars[userInput - 1][0] + ". " + "Current price is " + "$" + cars[userInput-1][1]);
+	userInput = prompt("Please select cars (Enter 1 - 10) : ")
+	console.log("=============================================")
 
+	while(isNaN(userInput) || userInput < 1 || userInput > 10 ) {
+		userInput = prompt("Invalid Input! Please select cars (Enter 1 - 10) : ")			
+		console.log("=============================================")
 
-userInput = prompt("Please select cars (Enter 1 - 10) : ")
-while(isNaN(userInput) || userInput < 1 || userInput > 10 ) {
-	userInput = prompt("Invalid Input! Please select cars (Enter 1 - 10) : ")
-} 
-console.log("Your car is " + cars[userInput - 1][0] + ". " + "Current price is " + "$" + cars[userInput-1][1]);
+	} 
 
-let bidLoop = true
+	console.log("Your car is " + cars[userInput - 1].brand + ". " + "Current price is " + "$" + cars[userInput-1].bid);
+	console.log("=============================================")
+	
 
-while (bidLoop = true) {
-    let bidInput = parseInt(prompt('Bid : '))
-    if (isNaN(bidInput) || bidInput < 100) {
-        console.log('You must bid more than $100')
-    } else {
-        console.log('Your current price is : ' + (cars[userInput-1][1] + bidInput))
-        qbid = prompt('Do you want to bid more? (y/N) : ')
-        if (qbid === 'y' || qbid === 'Y') {
-            bidLoop = true
-        } else if (qbid === 'n' || qbid === 'N' || qbid === '') {
-            break;
-        }
-    }
+	let bidLoop = true
+
+	while (bidLoop = true) {
+		let bidInput = parseInt(prompt('Bid : '))
+		console.log("=============================================")
+
+		if (isNaN(bidInput) || bidInput < 100) {
+			console.log('You must bid more than $100')
+			console.log("=============================================")
+			
+		} else {
+			console.log('Your current price is : ' + (cars[userInput-1].bid + bidInput))
+			let qbidprompt = true
+			while (qpidprompt = true) {
+				qbid = prompt('Do you want to bid more? (y/N) : ')
+				console.log("=============================================")
+				
+				if (qbid === 'y' || qbid === 'Y') {
+					break;
+				} else if (qbid === 'n' || qbid === 'N' || qbid === '') {
+					break;
+				} else {
+					console.log("Invalid input!!")
+					console.log("=============================================")
+
+					qbidprompt = true
+				}
+			}
+			if (qbid === 'n' || qbid === 'N') {
+				break;
+			} 
+		}
+	}
+
+	let shopping = true
+
+	let buymore;
+
+	while (shopping = true) {
+
+		buymore = prompt("Do you want to buy more cars? (Y/n) : ")
+
+		console.log("=============================================")
+
+		if (buymore === "y" || buymore === "Y" || buymore === "") {
+			break;
+
+		} else if (buymore === "n" || buymore === "N") {
+			break;
+
+		} else {
+			console.log("Invalid Input!")
+
+			console.log("=============================================")
+			shopping = true
+
+		}
+
+	}
+	if (buymore === "n" || buymore === "N") {
+		break;
+
+	}
+
 }
