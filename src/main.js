@@ -3,19 +3,62 @@ const prompt = require('prompt-sync')({ sigint: true });
 
 // OK THIS IS KHING's MESSAGE
 
-const cars = [
-                ["BMW", 2000],
-                ["TOYOTA", 1000],
-                ["MAZDA", 1500],
-                ["TESLA", 3000],
-                ["BENZ", 4000],
-                ["BYD", 900],
-                ["FORD", 1000],
-                ["VOLVO", 1200],
-                ["JEEB", 2000],
-                ["HONDA", 1000],
-            ];
+// const cars = [
+//                 ["BMW", 2000],
+//                 ["TOYOTA", 1000],
+//                 ["MAZDA", 1500],
+//                 ["TESLA", 3000],
+//                 ["BENZ", 4000],
+//                 ["BYD", 900],
+//                 ["FORD", 1000],
+//                 ["VOLVO", 1200],
+//                 ["JEEB", 2000],
+//                 ["HONDA", 1000],
+//             ];
 
+const cars = [
+    {
+        brand : "BMW",
+        bid : 2000
+    },
+    {
+        brand : "TOYOTA",
+        bid : 1000
+    },
+    {
+        brand : "MAZDA",
+        bid : 1500
+    },
+    {
+        brand : "TESLA",
+        bid : 3000
+    },
+    {
+        brand : "BENZ",
+        bid : 4000
+    },
+    {
+        brand : "BYD",
+        bid : 900
+    },
+    {
+        brand : "FORD",
+        bid : 1000
+    },
+    {
+        brand : "VOLVO",
+        bid : 1200 
+    },
+    {
+        brand : "JEEB",
+        bid : 2000
+    },
+    {
+        brand : "HONDA",
+        bid : 1000
+    },
+    
+]
 
 for (let i = 0; i < 10; i++) {
     indexNum = i + 1;
