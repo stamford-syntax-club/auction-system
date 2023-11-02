@@ -88,13 +88,11 @@ while(shop = true) {
 			cars[userInput-1].bid += newBid;
 			console.log('Your current price is : ' + cars[userInput-1].bid)
 			let qbidprompt = true
-			while (qpidprompt = true) {
+			while (qbidprompt = true) {
 				qbid = prompt('Do you want to bid more? (y/N) : ')
 				console.log("=============================================")
 				
-				if (qbid === 'y' || qbid === 'Y') {
-					break;
-				} else if (qbid === "n" || qbid === "N" || qbid === "") {
+				if (qbid === 'y' || qbid === 'Y' || qbid === "n" || qbid === "N" || qbid === "") {
 					break;
 				} else {
 					console.log("Invalid input!!")
@@ -103,7 +101,7 @@ while(shop = true) {
 					qbidprompt = true
 				}
 			}
-			if (qbid === 'n' || qbid === 'N') {
+			if (qbid === "n" || qbid === "N" || qbid === "") {
 				break;
 			} 
 		}
@@ -119,12 +117,8 @@ while(shop = true) {
 
 		console.log("=============================================")
 
-		if (buymore === "y" || buymore === "Y" || buymore === "") {
+		if (buymore === "y" || buymore === "Y" || buymore === "" || buymore === "n" || buymore === "N") {
 			break;
-
-		} else if (buymore === "n" || buymore === "N") {
-			break;
-
 		} else {
 			console.log("Invalid Input!")
 
